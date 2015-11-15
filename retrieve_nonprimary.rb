@@ -12,8 +12,8 @@ begin
         puts 'connected'
         puts "Enter the Non Primary Key value (1. STABBR 2. CITY)"
         option = gets
-
-        puts case option
+        puts option
+        case option
 	when 1
 		col_name = "stabbr"
 	when 2
