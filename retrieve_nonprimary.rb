@@ -13,7 +13,7 @@ begin
         puts "Enter the Non Primary Key option (1. STABBR 2. CITY)"
         option = gets
         puts option
-        case option
+        case option.chomp
 	when 1
 		col_name = "stabbr"
 		puts "Enter the stabbr value"
