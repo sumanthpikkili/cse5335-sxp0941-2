@@ -8,17 +8,17 @@ begin
     puts "connected to mongo db"
     db = client.database
     college=db.collection('universities')
-    puts "Enter the primary key value"
+    puts "Enter the primary key value(UNITID)"
     pk = gets
+   
     if pk.strip! == nil
 	puts "Retrieve successful"
 	puts "The retrieved data for the primary key value entered is"
-	result = college.find({ :unitid =>primary_key })              
-        end
-  	result.each{
-
-	puts result
-	}
-        puts "insertion into mongo db done"
+	result = college.find({ :unitid =>pk })              
+        result.each do |document|
+  	puts "#{document['unitid']} | #{document['opeid']} | #{document['opeid6']} | #{document['instnm']} | #{document['city']} | #{document['stabbr']} | #{document['insturl']}" 
+	
+	end
+    end
 
 end
