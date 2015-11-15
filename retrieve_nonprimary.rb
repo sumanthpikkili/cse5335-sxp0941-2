@@ -10,22 +10,24 @@ uri = URI.parse('postgres://vbzzdosloeskke:8DPMBrS0qFPfF5gRY6MkFvFN9H@ec2-107-21
 begin
         connection = PG.connect(uri.hostname, uri.port, nil, nil, uri.path[1..-1], uri.user, uri.password)
         puts 'connected'
-        puts "Enter the Non Primary Key value (1. STABBR 2. CITY)"
+        puts "Enter the Non Primary Key option (1. STABBR 2. CITY)"
         option = gets
         puts option
         case option
 	when 1
 		col_name = "stabbr"
+		puts "Enter the stabbr value"
+		nonpk = gets
 	when 2
 		col_name = "city"
+		puts "Enter the city value"
+		nonpk = gets
 	else
 		"You have chosen the wrong option"
 	end
-	
-	puts "Enter the value for the Non Primarykey chosen"
-	nonpk=gets
 
-        query = connection.exec("select * from universities where" +  col_name + " =" + nonpk + ";");
+
+        query = connection.exec("select * from universities where" +  col_name + "=" + nonpk + ";");
 	puts query
         puts "The following are your search results based on the non Primary key value that you have given for stabbr"
         query.each {
