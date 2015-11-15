@@ -10,15 +10,15 @@ uri = URI.parse('postgres://vbzzdosloeskke:8DPMBrS0qFPfF5gRY6MkFvFN9H@ec2-107-21
 begin
         connection = PG.connect(uri.hostname, uri.port, nil, nil, uri.path[1..-1], uri.user, uri.password)
         puts 'connected'
-        puts "Enter the Non Primary Key option (1. STABBR 2. CITY)"
+        puts "Enter the Non Primary Key option (a. STABBR b. CITY)"
         option = gets
         puts option
         case option.chomp
-	when 1
+	when 'a'
 		col_name = "stabbr"
 		puts "Enter the stabbr value"
 		nonpk = gets
-	when 2
+	when 'b'
 		col_name = "city"
 		puts "Enter the city value"
 		nonpk = gets
