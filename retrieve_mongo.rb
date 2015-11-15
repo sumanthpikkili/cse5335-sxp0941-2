@@ -11,14 +11,12 @@ begin
     puts "Enter the primary key value(UNITID)"
     pk = gets
    
-    if pk.strip! == nil
 	puts "Retrieve successful"
 	puts "The retrieved data for the primary key value entered is"
 	result = college.find({ :unitid =>pk })              
         result.each do |document|
   	puts "#{document['unitid']} | #{document['opeid']} | #{document['opeid6']} | #{document['instnm']} | #{document['city']} | #{document['stabbr']} | #{document['insturl']}" 
 	
-	end
     end
 
 end
