@@ -25,7 +25,8 @@ begin
 	puts "Enter the value for the Non Primarykey chosen"
 	nonpk=gets
 
-        query = connection.exec("select * from universities where" +  col_name + " =" + nonpk + "" + "limit 20;");
+        query = connection.exec("select * from universities where" +  col_name + " =" + nonpk + ";");
+	puts query
         puts "The following are your search results based on the non Primary key value that you have given for stabbr"
         query.each {
         unitid=query[0]['unitid']
