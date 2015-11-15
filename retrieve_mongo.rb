@@ -16,7 +16,7 @@ begin
     puts "Retrieve successful"
     puts "The retrieved data for the primary key value entered is"
     result = college.find({ :unitid =>pkey })
-    puts "UNITID | OPEID | OPEID6 | INSTNM | CITY | STABBR | INSTURL              
+    puts "UNITID | OPEID | OPEID6 | INSTNM | CITY | STABBR | INSTURL"              
     result.each do |document|
   	puts "#{document['unitid']} | #{document['opeid']} | #{document['opeid6']} | #{document['instnm']} | #{document['city']} | #{document['stabbr']} | #{document['insturl']}" 
 	
