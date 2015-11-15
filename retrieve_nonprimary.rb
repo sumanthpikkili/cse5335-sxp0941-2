@@ -31,14 +31,14 @@ begin
         query = connection.exec("select * from universities where " +  col_name + "=" + "'" + nonpk + "'" + " LIMIT 20;");
 	puts query
         puts "The following are your search results based on the non Primary key value that you have given for stabbr"
-        query.each {
-        unitid=query[0]['unitid']
-        opeid=query[0]['opeid']
-        opeid6=query[0]['opeid6']
-        instnm=query[0]['instnm']
-        city=query[0]['city']
-        stabbr=query[0]['stabbr']
-        insturl=query[0]['insturl']
+        query.each do |obj| {
+        unitid=obj['unitid']
+        opeid=obj['opeid']
+        opeid6=obj['opeid6']
+        instnm=obj['instnm']
+        city=obj['city']
+        stabbr=obj['stabbr']
+        insturl=obj['insturl']
 
         p "#{unitid} #{opeid} #{opeid6} #{instnm} #{city} #{stabbr} #{insturl}"
         }
