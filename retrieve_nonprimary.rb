@@ -25,7 +25,8 @@ begin
 	else
 		"You have chosen the wrong option"
 	end
-
+	
+	nonpk=nonpk.chomp
 
         query = connection.exec("select * from universities where " +  col_name + "=" + "'" + nonpk + "'" + ";");
 	puts query
