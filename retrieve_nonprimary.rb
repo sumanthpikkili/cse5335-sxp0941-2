@@ -28,7 +28,7 @@ begin
 	
 	nonpk=nonpk.chomp
 
-        query = connection.exec("select * from universities where " +  col_name + "=" + "'" + nonpk + "'" + ";");
+        query = connection.exec("select * from universities where " +  col_name + "=" + "'" + nonpk + "'" + " LIMIT 20;");
 	puts query
         puts "The following are your search results based on the non Primary key value that you have given for stabbr"
         query.each {
