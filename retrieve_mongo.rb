@@ -22,8 +22,8 @@ begin
 	result = college.find({ :unitid =>pkey })
 	puts "UNITID | OPEID | OPEID6 | INSTNM | CITY | STABBR | INSTURL              
         result.each do |document|
-  	puts "#{document['unitid']} | #{document['opeid']} | #{document['opeid6']} | #{document['instnm']} | #{document['city']} | #{document['stabbr']} | #{document['insturl']}" 
+  		puts "#{document['unitid']} | #{document['opeid']} | #{document['opeid6']} | #{document['instnm']} | #{document['city']} | #{document['stabbr']} | #{document['insturl']}" 
 	
-    end
+	end
 
 end
