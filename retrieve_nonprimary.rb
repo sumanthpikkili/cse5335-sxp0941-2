@@ -27,7 +27,7 @@ begin
 	end
 
 
-        query = connection.exec("select * from universities where" +  col_name + "=" + nonpk + ";");
+        query = connection.exec("select * from universities where " +  col_name + "=" + nonpk + ";");
 	puts query
         puts "The following are your search results based on the non Primary key value that you have given for stabbr"
         query.each {
