@@ -2,8 +2,8 @@
 ### Author Name: Sumanth Pikkili
 ### UTA-ID: 1001100941
 
-Dataset: sample.csv
-Screenshots of Execution in 'Screenshots' folder
+#Dataset: sample.csv
+#Screenshots of Execution in 'Screenshots' folder
 
 What is your external data source used to populate your Heroku data sources?
 
