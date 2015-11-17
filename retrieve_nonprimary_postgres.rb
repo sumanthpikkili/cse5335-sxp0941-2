@@ -5,7 +5,7 @@ require 'csv'
 require 'uri'
 require 'pg'
 
-//Parsing the PostGres URI
+#Parsing the PostGres URI
 uri = URI.parse('postgres://vbzzdosloeskke:8DPMBrS0qFPfF5gRY6MkFvFN9H@ec2-107-21-223-110.compute-1.amazonaws.com:5432/deb8hqfv9kd04o')
 
 begin
