@@ -4,8 +4,9 @@ require 'csv'
 mongo_uri = 'mongodb://heroku_8c77z5bn:s650vnnnpv39p3h8epm0jima98@ds053764.mongolab.com:53764/heroku_8c77z5bn'
 
 begin
+    #Connecting to the Mongo Client
     client = Mongo::Client.new([ 'ds053764.mongolab.com:53764' ],:database =>'heroku_8c77z5bn',:user=>'heroku_8c77z5bn',:password=>'s650vnnnpv39p3h8epm0jima98');
-    puts "connected to mongo db"
+    puts "Successfully connected to mongo db"
     
      puts "Enter the Non Primary Key option (a. STABBR b. CITY)"
         option = gets
