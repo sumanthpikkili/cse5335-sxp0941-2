@@ -22,7 +22,13 @@ What are the Heroku toolbelt commands to execute the scripts?
     b) retrieve_postgres.rb  - Retrieves data from the postgres database based on the Primary key provided by the user
     c) retrieve_postgres_nonprimary.rb - Retrieves data (and limits to 20 elements) from the postgres based on the Non Primary key provided by the user
     d) insert_mongo.rb - Pulls data from the csv file and inserts it into the mongo database
-    e) retrieve_mongo.rb - Retrieves data from the Mongo database and based on the Primary Key provided by the user
+    e) retrieve_mongo.rb - Retrieves data from the Mongo database based on the Primary Key provided by the user
     f) retrieve_mongo_nonprimary.rb  - Retrieves data from the Mongo database (and limits to 20 records) based on the Non Primary key provided by the user
     g) insert_redis.rb - Pulls data from the CSV file and inserts it into the Redis database
-    h) retrieve_redis.rb - Pulls data from the redis database based on the Primary Key provided by the user
+    h) retrieve_redis.rb - Pulls data from the Redis database based on the Primary Key provided by the user
+
+
+What aspect of the implementation did you find easy, if any, and why?
+
+    I found inserting and retrieving data from PostGres database easy since PostGres is an SQL database and I have had many years of experience working on SQL databases. I was also able to verify the working of my PostGres scripts by running SQL Queries in the PGSQL CLI on Heroku.
+    
