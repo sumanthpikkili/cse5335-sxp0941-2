@@ -9,9 +9,11 @@ uri = URI.parse('postgres://vbzzdosloeskke:8DPMBrS0qFPfF5gRY6MkFvFN9H@ec2-107-21
 
 begin
         connection = PG.connect(uri.hostname, uri.port, nil, nil, uri.path[1..-1], uri.user, uri.password)
-        puts 'connected'
+        puts 'Connected to the PostGres database'
+	#Program takes user input as the Primary key
 	puts "Enter the Primary Key value"
 	pk = gets
+	#Executing the query to retrieve the universities, given the primary key value as entered by the user
         query = connection.exec("select * from universities where unitid =" + pk + ";");
         puts "The following are your search results based on the Primary key value that you have given"
 	query.each {
@@ -22,10 +24,10 @@ begin
 	city=query[0]['city']
 	stabbr=query[0]['stabbr']
 	insturl=query[0]['insturl']
-	
+	#Printing the values retrieved
 	p "#{unitid} #{opeid} #{opeid6} #{instnm} #{city} #{stabbr} #{insturl}"
 	}
  
-        puts "success"
+        puts "Retrieve Success"
         connection.close
 end
