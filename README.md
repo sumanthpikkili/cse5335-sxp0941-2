@@ -1,69 +1,28 @@
-<<<<<<< HEAD
-# ruby-getting-started
+### CSE5335-Project1
+### Author Name: Sumanth Pikkili
+### UTA-ID: 1001100941
 
-A barebones Rails app, which can easily be deployed to Heroku.
 
-This application support the [Getting Started with Ruby on Heroku](https://devcenter.heroku.com/articles/getting-started-with-ruby) article - check it out.
+What is your external data source used to populate your Heroku data sources?
 
-## Running Locally
+    The external data that I used to populate my data has been picked up from the site http://www.data.gov/developers/apis. The dataset represents a college Scorecards that makes it easier for students to search for a college that is a good fit for them. They can use the College Scorecard to find out more about a college's affordability and value so they can make more informed decisions about which college to attend. 
+    
 
-Make sure you have Ruby installed.  Also, install the [Heroku Toolbelt](https://toolbelt.heroku.com/).
+What are the Heroku toolbelt commands to execute the scripts?
 
-```sh
-$ git clone git@github.com:heroku/ruby-getting-started.git
-$ cd ruby-getting-started
-$ bundle install
-$ bundle exec rake db:create db:migrate
-$ foreman start web
-```
+    The commands that I used to push the code to Heroku are:
+    git add .
+    git commit -m "Pushed"
+    git push heroku master
+    heroku run ruby <scriptname>
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
 
-## Deploying to Heroku
-
-```sh
-$ heroku create
-$ git push heroku master
-$ heroku run rake db:migrate
-$ heroku open
-```
-
-## Docker
-
-The app can be run and tested using the [Heroku Docker CLI plugin](https://devcenter.heroku.com/articles/introduction-local-development-with-docker).
-
-Make sure the plugin is installed:
-
-    heroku plugins:install heroku-docker
-
-Configure Docker and Docker Compose:
-
-    heroku docker:init
-
-And run the app locally:
-
-    docker-compose up web
-
-The app will now be available on the Docker daemon IP on port 8080.
-
-To work with the local database and do migrations, you can open a shell:
-
-    docker-compose run shell
-    bundle exec rake db:migrate
-
-You can also use Docker to release to Heroku:
-
-    heroku create
-    heroku docker:release
-    heroku open
-
-## Documentation
-
-For more information about using Ruby on Heroku, see these Dev Center articles:
-
-- [Ruby on Heroku](https://devcenter.heroku.com/categories/ruby)
-
-=======
-# cse5335-sxp0941-2
-CSE 5335 Project 2
->>>>>>> 7fe94c62abd97c8187e08319b0be455d3f920312
+    The following scripts need to be run:
+    a) insert_postgres.rb -  Pulls data from the CSV file and inserts it into the PostGres database
+    b) retrieve_postgres.rb  - Retrieves data from the postgres database based on the Primary key provided by the user
+    c) retrieve_postgres_nonprimary.rb - Retrieves data (and limits to 20 elements) from the postgres based on the Non Primary key provided by the user
+    d) insert_mongo.rb - Pulls data from the csv file and inserts it into the mongo database
+    e) retrieve_mongo.rb - Retrieves data from the Mongo database and based on the Primary Key provided by the user
+    f) retrieve_mongo_nonprimary.rb  - Retrieves data from the Mongo database (and limits to 20 records) based on the Non Primary key provided by the user
+    g) insert_redis.rb - Pulls data from the CSV file and inserts it into the Redis database
+    h) retrieve_redis.rb - Pulls data from the redis database based on the Primary Key provided by the user
