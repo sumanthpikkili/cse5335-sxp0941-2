@@ -16,7 +16,7 @@ What are the Heroku toolbelt commands to execute the scripts?
     git add .
     git commit -m "Pushed"
     git push heroku master
-    heroku run ruby <scriptname>
+    Command to run the script on Heroku: heroku run ruby <scriptname>
 
 
     The following scripts need to be run:
