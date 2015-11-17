@@ -7,7 +7,7 @@
 
 What is your external data source used to populate your Heroku data sources?
 
-    The external data that I used to populate my data has been picked up from the site http://www.data.gov/developers/apis. The dataset represents a college Scorecards that makes it easier for students to search for a college that is a good fit for them. They can use the College Scorecard to find out more about a college's affordability and value so they can make more informed decisions about which college to attend. 
+    The external data source that I used to populate my data has been picked up from the site http://www.data.gov/developers/apis. The dataset represents a college Scorecards that makes it easier for students to search for a college that is a good fit for them. They can use the College Scorecard to find out more about a college's affordability and value so they can make more informed decisions about which college to attend. 
     
 
 What are the Heroku toolbelt commands to execute the scripts?
