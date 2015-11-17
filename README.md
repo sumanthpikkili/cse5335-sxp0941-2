@@ -32,3 +32,7 @@ What aspect of the implementation did you find easy, if any, and why?
 
     I found inserting and retrieving data from PostGres database easy since PostGres is an SQL database and I have had many years of experience working on SQL databases. I was also able to verify the working of my PostGres scripts by running SQL Queries in the PGSQL CLI on Heroku.
     
+What aspect of the implementation did you find hard, if any, and why?
+
+    I found implementing Redis with Ruby difficult because Redis involves Key Value pairs. I faced difficulties when trying to retrive data using keys. Also, the default Ruby version installed on Mac is 2.0.0 and the implementation steps that I followed for Redis required Ruby version 2.2.3. I had to update the Ruby version to 2.2.3 to get Redis working. This update created problems when pushing the code to the heroku server. The command 'bundle install' failed which prevented the deployment to the Heroku server. I had to update the Gemfile to get the deployment working.
+    
