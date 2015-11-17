@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ruby-getting-started
 
 A barebones Rails app, which can easily be deployed to Heroku.
@@ -62,3 +63,7 @@ For more information about using Ruby on Heroku, see these Dev Center articles:
 
 - [Ruby on Heroku](https://devcenter.heroku.com/categories/ruby)
 
+=======
+# cse5335-sxp0941-2
+CSE 5335 Project 2
+>>>>>>> 7fe94c62abd97c8187e08319b0be455d3f920312
